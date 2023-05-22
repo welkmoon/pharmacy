@@ -1,0 +1,31 @@
+application:
+  title: Pharmacy Automation
+  version: 0.1.1
+  allowedOrigin: http://localhost:4200
+
+authentication.jwt:
+  secretKey: IXsnBJ3+sau2yEiFXEaUkMUCtS3Emz3Bst0cUVQx4zg=
+  accessTokenExpirationInMillis: 259200000
+
+spring:
+  security:
+    user:
+      name: demo
+      password: demo
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pharmacy
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate.ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+      org.hibernate.envers.default_schema: app_audit
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+  liquibase:
+    change-log: db/master.xml
+    enabled: false
