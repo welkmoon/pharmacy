@@ -1,0 +1,28 @@
+<mat-card class="card">
+  <img [src]="'./assets/products/' + product.imgUrl" alt="product photo" mat-card-image>
+  <mat-card-header>
+    <mat-card-title>{{product.name}}</mat-card-title>
+    <mat-card-subtitle>{{product.description}}</mat-card-subtitle>
+  </mat-card-header>
+  <!--  <mat-card-content>-->
+  <!--    <p>{{product.description}}</p>-->
+  <!--  </mat-card-content>-->
+  <mat-card-actions align="start" style="display: flex">
+    <button disabled mat-button style="color: black; font-size: large; font-weight: bold">{{product.price}}</button>
+    <span class="spacer"></span>
+    <button mat-button>BUY</button>
+    <button mat-button>BUY NOW</button>
+    <button
+      *ngIf="showIcon && authService.isAuthenticated()"
+      (click)="toggleFavouriteProduct(product)"
+      [class.active]="product.isFavourite"
+      aria-label="Example icon button with a heart icon"
+      class="favourite-icon"
+      color="warn"
+      mat-icon-button
+
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

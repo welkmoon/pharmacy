@@ -1,0 +1,30 @@
+
+:host {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #e7ecee;
+
+  h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .main-text {
+    margin-top: 10px;
+  }
+
+  img {
+    display: flex;
+    margin: auto;
+    justify-self: center;
+    height: 300px;
+    width: 300px;
+  }
+}

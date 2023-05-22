@@ -1,0 +1,8 @@
+:host {
+  .products-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem 1rem;
+  }
+}

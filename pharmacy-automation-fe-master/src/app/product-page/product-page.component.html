@@ -1,0 +1,11 @@
+<div>
+  <!--  <mat-paginator [length]="pagination?.totalElements"-->
+  <!--                 [pageSizeOptions]="[5, 10, 15, 20]"-->
+  <!--                 [pageSize]="pagination?.size"-->
+  <!--                 aria-label="Select page"-->
+  <!--                 style="background: inherit">-->
+  <!--  </mat-paginator>-->
+  <div class="products-container">
+    <app-product-card *ngFor="let product of products" [product]="product" style="flex-basis: 30%"></app-product-card>
+  </div>
+</div>
